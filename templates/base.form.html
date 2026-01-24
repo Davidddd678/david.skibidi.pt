@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>{% block title %}{% endblock %}</title>
+     <style>
+
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: #739797;
+
+        }
+        .content
+        {   
+            border: 1px solid #611e1e;
+            padding:10px;
+            background-color: #b5e2e0;
+        }
+
+     </style>
+</head>
+<body>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>
+</head>
+<body>
+
+</body>
+</html>

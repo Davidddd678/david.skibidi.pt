@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+</head>
+<body>
+
+    <div>
+        {% for page in pages %}
+            <a href="{{ page }}"></a>
+        {% endfor %}
+    </div>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div id="footer">
+         Copyright 2026 by <a href="http://domain.invalid/">you</a>.
+    </div>
+</body>
+</html>
