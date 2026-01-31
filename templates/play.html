@@ -1,8 +1,56 @@
+
 {% extends "base.html" %}
-{% block title %}play{% endblock %}
+{% block title %}Play{% endblock %}
 {% block content %}
-    <h1>play</h1>
-    <p class="important">
-      Welcome to my awesome play page.
-    </p>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
+
+
+    .play {
+        background-color: #325B92;
+        font-family: "Irish Grover", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        height: 200px;
+        font-size: 175px;
+        padding: 12px;
+        border-radius: 30px;
+    }
+
+    .main {
+        display: flex;
+        font-family: "Jersey 25"
+    }
+
+    .game
+    {
+        font-size: 80px;
+        width: 60%;
+    }
+
+    .comment
+    {
+        width: 40%;
+        background-color: #CD4C4C;
+        border-radius: 67px;
+        font-size: 200px;
+    }
+
+
+</style>
+
+<div class="play">
+    Play
+</div>
+
+<div class="main">
+    <div class="game">Welcome to my goon play page</div>
+    <div class="comment">READY!!!!!!
+GO!!!!</div>
+</div>
+
 {% endblock %}

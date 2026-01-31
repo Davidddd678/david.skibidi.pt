@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -9,13 +9,27 @@ pages =['home', 'login', 'register', 'play']
 def home():
     return render_template("index.html", pages=pages)
 
-@app.route('/login')
+@app.route('/login', methods=['GET','POST'])
 def login():
-    return render_template("login.html", pages=pages)
+    if request.method == 'POST':
+        name = request.form['name']
+        password = request.form['password']
 
-@app.route('/register')
+        print(name, password)
+        return "Conteudo enviado!"
+    else:
+        return render_template("login.html", pages=pages)
+
+@app.route('/register', methods =['GET','POST'])
 def register():
-    return render_template("register.html", pages=pages)
+    if request.method =='POST':
+        name = request.form['name']
+        password = request.form ['password']
+
+        print(name,password)
+        return "Conteudo enviado!"
+    else:
+        return render_template("register.html", pages=pages)
 
 @app.route('/play')
 def play():

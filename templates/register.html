@@ -1,8 +1,19 @@
 {% extends "base.form.html" %}
 {% block title %}register{% endblock %}
 {% block content %}
-    <h1>register</h1>
-    <p class="important">
-      Welcome to my awesome register page.
-    </p>
+    <h1>Register</h1>
+    <form method="POST" actions="/register">
+
+        <div>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name">
+        </div>
+
+        <div>
+            <label for="password"> Password</label><br>
+            <input type="password" id="password" name="password">
+        </div>
+
+        <input type="submit" value="send">
+    </form>
 {% endblock %}
