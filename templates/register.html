@@ -6,7 +6,7 @@
 
         <div>
             <label for="name">Name</label><br>
-            <input type="text" id="name" name="name">
+            <input type="text" id="name" name="username">
         </div>
 
         <div>
@@ -16,4 +16,9 @@
 
         <input type="submit" value="send">
     </form>
+
+    {% if msg %}
+    <h1>{{ msg }}</h1>
+    {% endif %}
+
 {% endblock %}
